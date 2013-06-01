@@ -17,8 +17,13 @@ class CountryController extends Controller
         $country = $countries->findOneByCode($this->param('code'));
         $data = $module->{'get'.$type}($country);
 
-        if ($this->param('type') === 'Economy') {
-            $data['embargoes']['@nodeName'] = 'embargo';
+        switch ($type) {
+            case 'Economy':
+                $data['embargoes']['@nodeName'] = 'embargo';
+                break;
+            case 'Society':
+                $data['regions']['@nodeName'] = 'region';
+                break;
         }
         $vm = new ViewModel($data);
         $vm->setRootNodeName('country');
