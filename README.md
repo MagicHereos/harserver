@@ -7,7 +7,8 @@ Harserver is standalone webserver which allows you host your own API service loc
 
 Get started
 -----------
-Firstly, you should have installed dependencies through [Composer](http://getcomposer.org/).
+You can [download out of the box package](http://speedy.sh/cxCvs/harserver-v0.1.0.zip), or clone repository and install dependencies manually through [Composer](http://getcomposer.org/).
+
 To run your API webserver, execute following command:
 ```
 php .\server.php run --email="your_erepublik_email" --password="your_erepublik_password" --port=1337
