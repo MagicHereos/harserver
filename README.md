@@ -7,7 +7,7 @@ Harserver is standalone webserver which allows you host your own API service loc
 
 Get started
 -----------
-You can [download out of the box package](http://api.erpk.org/harserver.zip), or clone repository and install dependencies manually through [Composer](http://getcomposer.org/).
+You can [download out of the box package](http://harvester.erpk.org/archive/), or clone repository and install dependencies manually through [Composer](http://getcomposer.org/).
 
 To run your API webserver, execute following command:
 ```
