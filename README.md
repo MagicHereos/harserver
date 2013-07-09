@@ -18,7 +18,7 @@ php ./server.phar run --email="your_erepublik_email" --password="your_erepublik_
 ```
 ...or if you installed dependencies manually:
 ```bash
-php ./app/server.php run --email="your_erepublik_email" --password="your_erepublik_password" --port=1337
+php ./bin/server.php run --email="your_erepublik_email" --password="your_erepublik_password" --port=1337
 ```
 
 Now you can access resources under `http://localhost:1337/`
