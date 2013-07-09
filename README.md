@@ -11,7 +11,7 @@ You can [download out of the box package](http://harvester.erpk.org/archive/), o
 
 To run your API webserver, execute following command:
 ```
-php .\server.php run --email="your_erepublik_email" --password="your_erepublik_password" --port=1337
+php ./app/server.php run --email="your_erepublik_email" --password="your_erepublik_password" --port=1337
 ```
 Now you can access resources under `http://localhost:1337/`
 List of resources can be found in `src/API/routing.yml`
