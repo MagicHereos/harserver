@@ -11,8 +11,12 @@ class BattleController extends Controller
     public function battle()
     {
         $module = new MilitaryModule($this->client);
-        $data = $module->getCampaign($this->param('id'));
+
+        $campaign = $module->getCampaign($this->param('id'));
+        $stats = $module->getCampaignStats($campaign);
         
+        $data = array_merge($campaign->toArray(), $stats);
+
         foreach (array('attacker','defender') as $side) {
             for ($i=1; $i <= 4; $i++) {
                 $data[$side]['divisions'][$i]['top_fighters']['@nodeName']='citizen';
