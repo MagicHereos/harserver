@@ -12,7 +12,7 @@ class CitizenController extends Controller
     public function profile()
     {
         $module = new CitizenModule($this->client);
-        $data = $module->get($this->param('id'));
+        $data = $module->getProfile($this->param('id'));
 
         $vm = new ViewModel($data);
         $vm->setRootNodeName('citizen');
