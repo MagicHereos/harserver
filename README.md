@@ -1,4 +1,4 @@
-Harserver
+harserver
 =========
 
 Introduction
@@ -15,7 +15,7 @@ Download out of the box application [here](http://dev.erpk.org/downloads) and un
 ###Recommended method
 * Create new empty directory
 * Download latest [composer.phar](http://getcomposer.org/) and place it inside directory
-* Run command ```php composer.phar create-project erpk/harserver *```
+* Run command ```php composer.phar create-project erpk/harserver .```
 
 Composer will check your PHP configuration and download required dependencies. It may take several minutes.
 
