@@ -1,16 +1,17 @@
 {
+    "name": "erpk/harserver",
     "require": {
         "erpk/harvester": "dev-master",
         "react/react": "0.3.*",
-        "symfony/routing": "2.2.*",
-        "symfony/config": "2.2.*",
-        "symfony/yaml": "2.2.*",
-        "symfony/http-foundation": "2.2.*",
-        "symfony/console": "2.2.*"
+        "symfony/routing": "2.3.*",
+        "symfony/config": "2.3.*",
+        "symfony/yaml": "2.3.*",
+        "symfony/http-foundation": "2.3.*",
+        "symfony/console": "2.3.*"
     },
     "autoload": {
         "psr-0": {
-            "API\\": "src/"
+            "Erpk\\Harserver\\": "src/"
         }
     }
 }

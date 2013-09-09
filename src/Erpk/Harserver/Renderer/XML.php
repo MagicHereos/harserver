@@ -1,5 +1,5 @@
 <?php
-namespace API\Renderer;
+namespace Erpk\Harserver\Renderer;
 
 use XMLWriter;
 

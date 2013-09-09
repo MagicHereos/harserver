@@ -1,9 +1,9 @@
 <?php
-namespace API\Controller;
+namespace Erpk\Harserver\Controller;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
-use API\ViewModel;
+use Erpk\Harserver\ViewModel;
 use Erpk\Harvester\Module\Country\CountryModule;
 use Erpk\Common\EntityManager;
 

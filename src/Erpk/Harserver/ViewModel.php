@@ -1,5 +1,5 @@
 <?php
-namespace API;
+namespace Erpk\Harserver;
 
 class ViewModel
 {

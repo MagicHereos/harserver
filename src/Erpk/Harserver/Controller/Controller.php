@@ -1,5 +1,5 @@
 <?php
-namespace API\Controller;
+namespace Erpk\Harserver\Controller;
 
 abstract class Controller
 {
