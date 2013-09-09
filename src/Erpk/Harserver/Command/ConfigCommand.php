@@ -52,7 +52,7 @@ class ConfigCommand extends Command
         );
 
         $config->save();
-        $output->writeln('Configuration file has been written to '.$config->getPath());
+        $output->writeln('Configuration file has been written to '.realpath($config->getPath()));
         $output->writeln('You can use harserver now!');
     }
 }
