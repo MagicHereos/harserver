@@ -47,6 +47,8 @@ standalone:
 http://localhost:1337/citizen/profile/123456.json
 http://localhost:1337/citizen/profile/123456.xml
 http://localhost:1337/citizen/search/romper/1.json
+http://localhost:1337/exchange/gold/1.json
+http://localhost:1337/exchange/cc/1.json
 http://localhost:1337/market/PL/weapons/7/1.xml
 
 webserver:
