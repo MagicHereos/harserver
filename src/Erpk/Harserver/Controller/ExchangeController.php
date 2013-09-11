@@ -11,20 +11,23 @@ class ExchangeController extends Controller
     public function get()
     {
         switch ($this->param('mode')) {
-            case 0:
             case 'cc':
                 $buy = ExchangeModule::CURRENCY;
                 break;
             case 'gold':
-            case 1:
             default:
                 $buy = ExchangeModule::GOLD;
                 break;
         }
 
         $module = new ExchangeModule($this->client);
-        $data = $module->scan($buy, $this->param('page'));
-        $data['@nodeName'] = 'offer';
+        $offers = $module->scan($buy, $this->param('page'));
+
+        $data = array(
+            'paginator' => $offers->getPaginator()->toArray(),
+            'offers'    => $offers->getArrayCopy()
+        );
+        $data['offers']['@nodeName'] = 'offer';
 
         $vm = new ViewModel($data);
         $vm->setRootNodeName('offers');

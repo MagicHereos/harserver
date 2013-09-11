@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ecd99be43cc483960a071691cdc562ce",
+    "hash": "c34779def5aea62d547107cecbb42bfd",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -571,18 +571,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/erpk/harvester.git",
-                "reference": "114823b848df850ded403f1d8461d6525c88ac59"
+                "reference": "903a0900b5e6984b702bdae6d79f149bc4bec5db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erpk/harvester/zipball/114823b848df850ded403f1d8461d6525c88ac59",
-                "reference": "114823b848df850ded403f1d8461d6525c88ac59",
+                "url": "https://api.github.com/repos/erpk/harvester/zipball/903a0900b5e6984b702bdae6d79f149bc4bec5db",
+                "reference": "903a0900b5e6984b702bdae6d79f149bc4bec5db",
                 "shasum": ""
             },
             "require": {
                 "doctrine/orm": "2.3.*",
                 "erpk/common": "0.3.*",
-                "guzzle/guzzle": "3.4.*"
+                "ext-curl": "*",
+                "ext-dom": "*",
+                "ext-json": "*",
+                "ext-pdo_sqlite": "*",
+                "guzzle/guzzle": "3.4.*",
+                "php": ">=5.3.10"
             },
             "type": "library",
             "autoload": {
@@ -592,7 +597,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2013-09-07 17:03:36"
+            "time": "2013-09-10 20:11:10"
         },
         {
             "name": "evenement/evenement",
