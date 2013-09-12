@@ -12,17 +12,24 @@ class BattleController extends Controller
     {
         $module = new MilitaryModule($this->client);
 
-        $campaign = $module->getCampaign($this->param('id'));
+        $id = $this->param('id');
+        $sides = array('attacker', 'defender');
+        $campaign = $module->getCampaign($id);
         $stats = $module->getCampaignStats($campaign);
-        
-        $data = array_merge($campaign->toArray(), $stats);
+        $info = $campaign->toArray();
 
-        foreach (array('attacker','defender') as $side) {
-            for ($i=1; $i <= 4; $i++) {
-                $data[$side]['divisions'][$i]['top_fighters']['@nodeName']='citizen';
+        foreach ($sides as $side) {
+            $info[$side] = array('country' => $info[$side]);
+            foreach ($stats[$side]['divisions'] as &$division) {
+                $division['top_fighters']['@nodeName'] = 'citizen';
             }
-            $data[$side]['divisions']['@nodeName'] = 'division';
+            $stats[$side]['divisions']['@nodeName'] = 'division';
         }
+
+        $data = array_merge_recursive(
+            $info,
+            $stats
+        );
 
         $vm = new ViewModel($data);
         $vm->setRootNodeName('battle');
